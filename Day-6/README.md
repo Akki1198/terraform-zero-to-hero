@@ -7,3 +7,6 @@ we use some commands to do that -
 Two ways to create workspace -
 1. create dev.tfvars, stage.tfvars and prod.tfvars
 2. terraform apply -var-file=dev.tfvarss
+
+
+ instance_type = lookup(var.instance_type, terraform.workspace, "t2.micro")
